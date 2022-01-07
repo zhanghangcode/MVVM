@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- 应用主色调 -->
+    <color name="app_colorPrimary">#03A9F4</color>
+    <!-- 应用主要暗色调 -->
+    <color name="app_colorPrimaryDark">#03A9F4</color>
+    <!-- 应用主要亮色调 -->
+    <color name="app_colorPrimaryLight">#B3E5FC</color>
+    <!-- 控件选中默认颜色 -->
+    <color name="app_colorAccent">#FF4081</color>
+    <!-- 分隔颜色 -->
+    <color name="app_colorDivider">#EBEBEB</color>
+    <!-- 应用错误色 -->
+    <color name="app_colorError">#D50000</color>
+    <!-- 应用主要背景色 -->
+    <color name="app_backgroundPrimary">@color/app_white</color>
+    <!-- 应用次要背景色 -->
+    <color name="app_backgroundSecondary">#EBEBEB</color>
+    <!-- 弹窗背景色 -->
+    <color name="app_backgroundDialog">@color/app_translucentDark</color>
+    <!-- App 背景色 -->
+    <color name="app_backgroundWindow">#FAF9F9</color>
+
+    <!-- 标题文本颜色 -->
+    <color name="app_textPrimary">@color/app_white</color>
+    <!-- 文本主色调 -->
+    <color name="app_textNormal">#212121</color>
+    <!-- 文本次要色调 -->
+    <color name="app_textSecondary">#999999</color>
+    <!-- 提示文本色调 -->
+    <color name="app_textHint">#CCCCCC</color>
+    <!-- 文本主色调 -->
+    <color name="app_textTheme">@color/app_colorPrimary</color>
+    <!-- 文本重点颜色 -->
+    <color name="app_textAccent">@color/app_colorAccent</color>
+    <!-- 文本错误颜色 -->
+    <color name="app_textError">@color/app_colorError</color>
+    <!-- 文本积分颜色 -->
+    <color name="app_textCoin">#FFF176</color>
+
+    <!-- 主要着色 -->
+    <color name="app_tintPrimary">@color/app_white</color>
+    <!-- 重点着色 -->
+    <color name="app_tintAccent">@color/app_colorAccent</color>
+    <!-- 非重点着色 -->
+    <color name="app_tintSecondary">#F1F1F1</color>
+    <!-- 主题着色 -->
+    <color name="app_tintTheme">@color/app_colorPrimary</color>
+    <!-- 错误着色 -->
+    <color name="app_tintError">@color/app_colorError</color>
+
+    <color name="app_white">#FFFFFF</color>
+    <color name="app_black">#000000</color>
+    <color name="app_transparentDark">#00000000</color>
+    <color name="app_transparentLight">#00FFFFFF</color>
+    <color name="app_translucentDark">#60000000</color>
+    <color name="app_translucentLight">#60FFFFFF</color>
+
+    <color name="red">#ff0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white30">#B2FFFFFF</color>
+
+    <color name="color_333333">#333333</color>
+    <color name="color_60656A">#60656A</color>
+    <color name="color_757575">#757575</color>
+    <color name="color_eaeaea">#eaeaea</color>
+
+    <color name="line">#DCDCDC</color>
+
+</resources>
