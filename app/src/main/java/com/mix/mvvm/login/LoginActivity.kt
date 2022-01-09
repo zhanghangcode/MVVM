@@ -4,7 +4,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.databinding.ActivityLoginBinding
-import com.mix.mvvm.ext.setOnclickNoRepeat
+import com.mix.mvvm.ext.setOnClickNoRepeat
 
 /**
  * @Date 執筆時間 2022/01/06 21:53
@@ -22,8 +22,13 @@ class LoginActivity : BaseVmActivity<ActivityLoginBinding, LoginViewModel>(Activ
     }
 
     override fun setListener() {
-        mBinding.tvRegister.setOnclickNoRepeat {
+        mBinding.tvRegister.setOnClickNoRepeat {
 
+        }
+        mBinding.btnLogin.setOnClickNoRepeat {
+            if (!mBinding.cbServiceAgreement.isChecked) {
+                Toast.makeText(this,"サービス契約とプライバシーポリシーに同意した後、ログインできます",Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
