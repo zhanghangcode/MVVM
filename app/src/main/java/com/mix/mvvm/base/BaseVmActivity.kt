@@ -25,7 +25,7 @@ abstract class BaseVmActivity<VB : ViewBinding, VM : BaseViewModel>
     }
 
     private fun initViewModel() {
-        mViewModel = ViewModelProvider(this).get(viewModelClass())
+        mViewModel = ViewModelProvider(this)[viewModelClass()]
     }
 
     protected abstract fun viewModelClass(): Class<VM>

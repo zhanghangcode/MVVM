@@ -4,6 +4,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.databinding.ActivityLoginBinding
+import com.mix.mvvm.databinding.ActivityLoginBinding.inflate
 import com.mix.mvvm.ext.setOnClickNoRepeat
 
 /**
@@ -13,8 +14,10 @@ import com.mix.mvvm.ext.setOnClickNoRepeat
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-class LoginActivity : BaseVmActivity<ActivityLoginBinding, LoginViewModel>(ActivityLoginBinding :: inflate) {
-    override fun viewModelClass(): Class<LoginViewModel> = LoginViewModel::class.java
+class LoginActivity : BaseVmActivity<ActivityLoginBinding, LoginViewModel>(::inflate) {
+    override fun viewModelClass(): Class<LoginViewModel> {
+        return LoginViewModel::class.java
+    }
 
     override fun initView() {
         super.initView()
