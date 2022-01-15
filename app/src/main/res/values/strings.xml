@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">MVVM</string>
 
-    <string name="hint_username">请输入账号</string>
-    <string name="hint_password">请输入密码</string>
+    <string name="author">caden</string>
+
+    <string name="title_home">ホーム</string>
+    <string name="title_tree">体系</string>
+    <string name="title_navi">ナビ</string>
+    <string name="title_project">項目</string>
+
+    <string name="action_search">検索</string>
+    <string name="action_settings">設置</string>
+
+    <string name="hint_username">アカウントをご入力ください</string>
+    <string name="hint_password">パスワードをご入力ください</string>
     <string name="password">パスワード</string>
     <string name="username">アカウント</string>
     <string name="register">登　録</string>
