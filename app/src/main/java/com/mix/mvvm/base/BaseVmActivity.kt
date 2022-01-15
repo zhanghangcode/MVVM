@@ -3,6 +3,7 @@ package com.mix.mvvm.base
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.viewbinding.ViewBinding
 
 /**

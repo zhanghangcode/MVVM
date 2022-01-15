@@ -1,7 +1,6 @@
-package com.mix.mvvm.login
+package com.mix.mvvm.ui.login
 
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.databinding.ActivityLoginBinding
 import com.mix.mvvm.databinding.ActivityLoginBinding.inflate

@@ -22,7 +22,7 @@ fun View.setOnClickNoRepeat(interval: Long = 500, onClick: (View) -> Unit){
             return@setOnClickListener
         }
         lastClickTime = currentTime
-        onClick.invoke(it)
+        onClick(it)
     }
 }
 

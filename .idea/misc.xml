@@ -6,7 +6,9 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-anydpi/app_vector_my.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/shape_border_primary_oval.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14387031408308004" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/menu/app_menu_main_bottom.xml" value="0.30512820512820515" />
       </map>
     </option>

@@ -3,8 +3,8 @@
 
     <string name="hint_username">请输入账号</string>
     <string name="hint_password">请输入密码</string>
-    <string name="password">密码</string>
-    <string name="username">账号</string>
-    <string name="register">注 册</string>
-    <string name="login">登 录</string>
+    <string name="password">パスワード</string>
+    <string name="username">アカウント</string>
+    <string name="register">登　録</string>
+    <string name="login">ログイン</string>
 </resources>

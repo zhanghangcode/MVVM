@@ -1,4 +1,4 @@
-package com.mix.mvvm.login
+package com.mix.mvvm.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,7 +17,7 @@ class LoginViewModel : BaseViewModel() {
 
     private val _loginState = MutableLiveData<Boolean>()
     val loginState: LiveData<Boolean> = _loginState
-
+    val test: Int = 3
     fun login(username: String?, password: String?) {
         val job = launch(
             block = {
