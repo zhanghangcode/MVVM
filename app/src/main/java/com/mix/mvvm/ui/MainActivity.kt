@@ -1,11 +1,19 @@
 package com.mix.mvvm.ui
 
-import android.os.Bundle
-import android.os.PersistableBundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.fragment.app.Fragment
+import com.mix.mvvm.R
+import com.mix.mvvm.adapter.CommonViewPagerAdapter
 import com.mix.mvvm.base.BaseActivity
 import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.databinding.ActivityMainBinding
+import com.mix.mvvm.databinding.AppBarMainBinding
+import com.mix.mvvm.databinding.ContentMainBinding
+import com.mix.mvvm.ui.main.home.HomeFragment
+import com.mix.mvvm.ui.main.navi.NaviFragment
+import com.mix.mvvm.ui.main.pro.ProjectFragment
+import com.mix.mvvm.ui.main.tree.TreeFragment
+import java.util.*
 
 /**
  * @Date 執筆時間 2022/01/15 10:38
@@ -16,5 +24,40 @@ import com.mix.mvvm.databinding.ActivityMainBinding
  */
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate){
 
+    private lateinit var mAppBarMainBinding: AppBarMainBinding
+    private lateinit var mContentMainBinding: ContentMainBinding
+
+    override fun initialize() {
+        super.initialize()
+        //include
+        mAppBarMainBinding = mBinding.appBarMain
+        mContentMainBinding = mBinding.appBarMain.contentMain
+
+        mAppBarMainBinding.toolbar.title = resources.getString(R.string.title_home)
+
+        initBarDrawer()
+
+        initFragments()
+    }
+
+    /**
+     * DrawerとToolbarを繋がる
+     */
+    private fun initBarDrawer() {
+        var toggle = ActionBarDrawerToggle(
+            this,
+            mBinding.drawerLayout,
+            mAppBarMainBinding.toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
+    }
+
+    private fun initFragments() {
+        val fragmentList: List<Fragment> = listOf(HomeFragment(), TreeFragment(), NaviFragment(), ProjectFragment())
+        val viewPagerAdapter = CommonViewPagerAdapter(this, fragmentList)
+        mAppBarMainBinding.contentMain.viewPager.offscreenPageLimit = 1
+        mAppBarMainBinding.contentMain.viewPager.adapter = viewPagerAdapter
+    }
 
 }
