@@ -38,7 +38,10 @@ android {
 }
 
 dependencies {
-    def room_version = "2.4.0"
+    def room_version = "2.4.1"
+    def okhttp_version = "4.9.3"
+    def retrofit_version = "2.9.0"
+    def logging_version = "4.9.3"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -51,8 +54,22 @@ dependencies {
     implementation "org.koin:koin-androidx-workmanager:2.2.1"
     implementation "org.koin:koin-androidx-compose:2.2.1"
     implementation "org.koin:koin-androidx-ext:2.2.1"
+
+    implementation "com.github.yechaoa.YUtils:yutilskt:3.2.2"
+
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_version"
+
+
+
+
+
+
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
