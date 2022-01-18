@@ -1,6 +1,8 @@
 package com.mix.mvvm.net.interceptor
 
+import android.content.SharedPreferences
 import com.mix.mvvm.common.Config
+import com.tencent.mmkv.MMKV
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
@@ -18,9 +20,12 @@ class AddCookiesInterceptor : Interceptor{
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val builder: Request.Builder = chain.request().newBuilder()
-        val stringSet = SpUtils.getStringSet(Config.COOKIE)
-        for (cookie in stringSet) {
-            builder.addHeader("Cookie", cookie)
+
+        val stringSet: String? = MMKV.defaultMMKV().decodeString(Config.COOKIE)
+        if (stringSet != null) {
+            for (cookie in stringSet) {
+                builder.addHeader("Cookie", cookie.toString())
+            }
         }
         return chain.proceed(builder.build())    }
 
@@ -36,6 +41,7 @@ class ReceivedCookiesInterceptor : Interceptor {
                 cookies.add(header)
             }
 //            SpUtil.setStringSet(Config.COOKIE, cookies)
+            MMKV.defaultMMKV().encode(Config.COOKIE, cookies)
         }
         return originalResponse
     }

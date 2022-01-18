@@ -55,7 +55,7 @@ dependencies {
     implementation "org.koin:koin-androidx-compose:2.2.1"
     implementation "org.koin:koin-androidx-ext:2.2.1"
 
-    implementation "com.github.yechaoa.YUtils:yutilskt:3.2.2"
+    implementation 'com.tencent:mmkv:1.2.12'
 
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
@@ -65,10 +65,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$logging_version"
 
-
-
-
-
+    implementation "com.youth.banner:banner:2.1.0"
 
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     testImplementation 'junit:junit:4.+'
