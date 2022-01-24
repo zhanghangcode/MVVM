@@ -12,6 +12,8 @@ import com.mix.mvvm.databinding.FragmentHomeBinding
  * @Vesion 1.0
  */
 class HomeFragment : BaseVmFragment<FragmentHomeBinding, HomeViewModel> (FragmentHomeBinding::inflate) {
+
+//    private  lateinit var mArticleAdapter: ArticleAdapter
     override fun viewModelClass(): Class<HomeViewModel> = HomeViewModel::class.java
 
     override fun initView() {
