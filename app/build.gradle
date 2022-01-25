@@ -50,6 +50,7 @@ dependencies {
     def retrofit_version = "2.9.0"
     def logging_version = "4.9.3"
     def router_version = "1.5.2"
+    def flowLayout_version = "1.1.2"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -75,6 +76,7 @@ dependencies {
 
     implementation "com.youth.banner:banner:2.1.0"
 
+    implementation "com.hyman:flowlayout-lib:$flowLayout_version"
     implementation "com.alibaba:arouter-api:$router_version"
     annotationProcessor "com.alibaba:arouter-compiler:$router_version"
 

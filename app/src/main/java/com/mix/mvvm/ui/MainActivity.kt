@@ -6,6 +6,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.mix.mvvm.R
 import com.mix.mvvm.adapter.CommonViewPagerAdapter
 import com.mix.mvvm.base.BaseActivity
@@ -13,12 +14,12 @@ import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.databinding.ActivityMainBinding
 import com.mix.mvvm.databinding.AppBarMainBinding
 import com.mix.mvvm.databinding.ContentMainBinding
+import com.mix.mvvm.router.ROUTER_PATH_MAIN
 import com.mix.mvvm.ui.login.LoginActivity
 import com.mix.mvvm.ui.main.home.HomeFragment
 import com.mix.mvvm.ui.main.navi.NaviFragment
 import com.mix.mvvm.ui.main.pro.ProjectFragment
 import com.mix.mvvm.ui.main.tree.TreeFragment
-import java.util.*
 
 /**
  * @Date 執筆時間 2022/01/15 10:38
@@ -27,6 +28,7 @@ import java.util.*
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
+@Route(path = ROUTER_PATH_MAIN)
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate){
 
     private lateinit var mAppBarMainBinding: AppBarMainBinding
@@ -85,6 +87,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             }
             //閉じる
             mBinding.drawerLayout.closeDrawer(GravityCompat.START)
+            true
+        }
+
+        mAppBarMainBinding.toolbar.setOnMenuItemClickListener{
+            when (it.itemId) {
+//                R.id.action_search ->
+//                R.id.action_settings ->
+            }
             true
         }
     }
