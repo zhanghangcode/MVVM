@@ -51,6 +51,7 @@ dependencies {
     def logging_version = "4.9.3"
     def router_version = "1.5.2"
     def flowLayout_version = "1.1.2"
+    def glide_version = "4.11.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -58,13 +59,17 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
-    implementation "org.koin:koin-androidx-scope:2.2.1"
-    implementation "org.koin:koin-androidx-viewmodel:2.2.1"
-    implementation "org.koin:koin-androidx-workmanager:2.2.1"
-    implementation "org.koin:koin-androidx-compose:2.2.1"
-    implementation "org.koin:koin-androidx-ext:2.2.1"
+    implementation "com.github.bumptech.glide:glide:${glide_version}"
+    implementation "com.github.bumptech.glide:compiler:${glide_version}"
+//    implementation "org.koin:koin-androidx-scope:2.2.1"
+//    implementation "org.koin:koin-androidx-viewmodel:2.2.1"
+//    implementation "org.koin:koin-androidx-workmanager:2.2.1"
+//    implementation "org.koin:koin-androidx-compose:2.2.1"
+//    implementation "org.koin:koin-androidx-ext:2.2.1"
 
     implementation 'com.tencent:mmkv:1.2.12'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
+
 
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
