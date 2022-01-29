@@ -42,6 +42,7 @@ class LoginActivity : BaseVmActivity<ActivityLoginBinding, LoginViewModel>(::inf
         mBinding.btnLogin.setOnClickNoRepeat {
             if (!mBinding.cbServiceAgreement.isChecked) {
                 Toast.makeText(this,"サービス契約とプライバシーポリシーに同意した後、ログインできます",Toast.LENGTH_SHORT).show()
+                return@setOnClickNoRepeat
             }
             login()
         }
