@@ -1,5 +1,8 @@
 #　Kotlin + MVVM + Jetpack + ViewBinding + Coroutinesに基づくAndroidクライアント
 -------------------
+![](https://img.shields.io/badge/MVVM-Jetpack-orange.svg)
+![](https://img.shields.io/hexpm/l/plug.svg)
+
 ## プロジェクトのきっかけ
 *練習
 
