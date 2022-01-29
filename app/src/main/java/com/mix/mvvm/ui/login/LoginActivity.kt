@@ -84,8 +84,7 @@ class LoginActivity : BaseVmActivity<ActivityLoginBinding, LoginViewModel>(::inf
             YUtils.hideLoading()
             SpUtil.setBoolean(Config.IS_LOGIN, it)
             if (it){
-                ToastUtil.show("ログイン成功")
-//                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             } else {
                 ToastUtil.show("ログイン失敗")
             }
