@@ -1,10 +1,9 @@
 package com.mix.mvvm
 
 import android.app.Application
-import com.alibaba.android.arouter.launcher.ARouter
 import com.tencent.mmkv.MMKV
-
-
+import com.yechaoa.yutilskt.LogUtil
+import com.yechaoa.yutilskt.YUtils
 
 
 /**
@@ -15,11 +14,21 @@ import com.tencent.mmkv.MMKV
  * @Vesion 1.0
  */
 class App : Application() {
+
+    companion object {
+        //控制三方库的编译模式
+        private const val isDebugMode = true
+    }
+
     override fun onCreate() {
         super.onCreate()
         MMKV.initialize(this)
-        ARouter.openLog()
-        ARouter.openDebug()
-        ARouter.init(this);
+        initYUtils()
+    }
+
+
+    private fun initYUtils() {
+        YUtils.init(this)
+        LogUtil.setIsLog(isDebugMode)
     }
 }

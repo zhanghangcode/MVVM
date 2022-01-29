@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
-import com.alibaba.android.arouter.facade.annotation.Route
+
 import com.mix.mvvm.R
 import com.mix.mvvm.adapter.CommonViewPagerAdapter
 import com.mix.mvvm.base.BaseActivity
@@ -28,7 +26,7 @@ import com.mix.mvvm.ui.main.tree.TreeFragment
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-@Route(path = ROUTER_PATH_MAIN)
+
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate){
 
     private lateinit var mAppBarMainBinding: AppBarMainBinding

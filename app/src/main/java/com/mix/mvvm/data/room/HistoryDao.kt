@@ -1,9 +1,6 @@
 package com.mix.mvvm.data.room
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.mix.mvvm.data.bean.History
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
@@ -16,6 +13,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
+@Dao
 interface HistoryDao {
 
     @Query("SELECT * FROM t_history WHERE type=:type ORDER BY insert_time DESC")
