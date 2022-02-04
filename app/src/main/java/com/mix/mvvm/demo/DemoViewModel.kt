@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModel
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-class TestViewModel : ViewModel() {
+class DemoViewModel : ViewModel() {
 
 //    var count = 0
    private  var _count = MutableLiveData<Int>().apply {

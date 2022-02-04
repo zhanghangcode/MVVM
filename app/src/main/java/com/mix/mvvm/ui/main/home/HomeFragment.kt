@@ -1,8 +1,8 @@
 package com.mix.mvvm.ui.main.home
 
-import androidx.fragment.app.Fragment
 import com.mix.mvvm.base.BaseVmFragment
 import com.mix.mvvm.databinding.FragmentHomeBinding
+import com.yechaoa.yutilskt.ToastUtil
 
 /**
  * @Date 執筆時間 2022/01/15 10:39
@@ -17,7 +17,7 @@ class HomeFragment : BaseVmFragment<FragmentHomeBinding, HomeViewModel> (Fragmen
     override fun viewModelClass(): Class<HomeViewModel> = HomeViewModel::class.java
 
     override fun initView() {
-
+        ToastUtil.show("initView")
     }
 
 }

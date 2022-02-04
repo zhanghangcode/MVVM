@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.mix.mvvm.ui.main.home.TestFragment
 import java.util.ArrayList
 
 /**
@@ -14,12 +15,18 @@ import java.util.ArrayList
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-class CommonViewPagerAdapter(activity: FragmentActivity, private var mFragments: List<Fragment>)
+class CommonViewPagerAdapter(activity: FragmentActivity)
     : FragmentStateAdapter(activity) {
+    private var mFragments: MutableList<Fragment> = ArrayList()
 
-    override fun getItemCount(): Int =mFragments.size
+    fun addFragment(fragment: Fragment) {
+        mFragments.add(fragment)
+    }
+    override fun getItemCount(): Int = 4
     override fun createFragment(position: Int): Fragment {
-     return mFragments[position]
+//     return mFragments[position]
+
+     return TestFragment()
     }
 }
 

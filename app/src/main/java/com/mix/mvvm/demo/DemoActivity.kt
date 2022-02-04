@@ -15,14 +15,14 @@ import com.mix.mvvm.R
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-class TestActivity : AppCompatActivity() {
+class DemoActivity : AppCompatActivity() {
 
     var count = 0
-    private val viewModel: TestViewModel by viewModels()
+    private val viewModel: DemoViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.test)
+        setContentView(R.layout.activity_demo)
 //        viewModel = ViewModelProvider(this).get(TestViewModel::class.java)
 
 

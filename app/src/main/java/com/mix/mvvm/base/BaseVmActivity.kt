@@ -15,7 +15,15 @@ import androidx.viewbinding.ViewBinding
  */
 abstract class BaseVmActivity<VB : ViewBinding, VM : BaseViewModel>
     (inflate : (LayoutInflater) -> VB) : BaseActivity<VB>(inflate) {
+
+
     protected open lateinit var mViewModel: VM
+
+    //ページング
+    protected open val mTotalCount = 20
+    protected open var mCurrentSize = 0
+    protected open var mCurrentPage = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViewModel()

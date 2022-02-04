@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 
 import com.mix.mvvm.R
 import com.mix.mvvm.adapter.CommonViewPagerAdapter
+import com.mix.mvvm.adapter.setFragmentAdapter
 import com.mix.mvvm.base.BaseActivity
 import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.databinding.ActivityMainBinding
@@ -15,9 +16,11 @@ import com.mix.mvvm.databinding.ContentMainBinding
 import com.mix.mvvm.router.ROUTER_PATH_MAIN
 import com.mix.mvvm.ui.login.LoginActivity
 import com.mix.mvvm.ui.main.home.HomeFragment
+import com.mix.mvvm.ui.main.home.TestFragment
 import com.mix.mvvm.ui.main.navi.NaviFragment
 import com.mix.mvvm.ui.main.pro.ProjectFragment
 import com.mix.mvvm.ui.main.tree.TreeFragment
+import java.util.*
 
 /**
  * @Date 執筆時間 2022/01/15 10:38
@@ -65,9 +68,26 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
      */
     private fun initFragments() {
         val fragmentList: List<Fragment> = listOf(HomeFragment(), TreeFragment(), NaviFragment(), ProjectFragment())
-        val viewPagerAdapter = CommonViewPagerAdapter(this, fragmentList)
+
+        val viewPagerAdapter = CommonViewPagerAdapter(this)
+//        mAppBarMainBinding.contentMain.viewPager.setFragmentAdapter(this) {
+//            count(4)
+//            createFragment { position ->
+//                when (position) {
+//                    0 -> HomeFragment()
+//                    1 -> TreeFragment()
+//                    2 -> NaviFragment()
+//                    else -> ProjectFragment()
+//                }
+//
+//            }
+//
+//        }
         mAppBarMainBinding.contentMain.viewPager.offscreenPageLimit = 1
         mAppBarMainBinding.contentMain.viewPager.adapter = viewPagerAdapter
+
+
+
     }
 
     override fun onResume() {
@@ -87,6 +107,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             mBinding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
+//        mAppBarMainBinding.contentMain.viewPager
+
 
         mAppBarMainBinding.toolbar.setOnMenuItemClickListener{
             when (it.itemId) {
