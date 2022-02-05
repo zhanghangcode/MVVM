@@ -1,6 +1,7 @@
 package com.mix.mvvm.net.interceptor
 
 import android.content.SharedPreferences
+import android.util.Log
 import com.mix.mvvm.common.Config
 import com.tencent.mmkv.MMKV
 import com.yechaoa.yutilskt.SpUtil
@@ -37,6 +38,7 @@ class ReceivedCookiesInterceptor : Interceptor {
         if (originalResponse.headers("Set-Cookie").isNotEmpty()) {
             val cookies: HashSet<String> = HashSet()
             for (header in originalResponse.headers("Set-Cookie")) {
+                Log.d("cookie","header" +header)
                 cookies.add(header)
             }
             SpUtil.setStringSet(Config.COOKIE, cookies)

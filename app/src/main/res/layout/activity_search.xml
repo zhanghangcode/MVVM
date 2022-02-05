@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp_15"
-                android:text="ホットな単語"
+                android:text="ホット"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_20"
                 android:textStyle="bold" />
@@ -62,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="@dimen/dp_15"
-                        android:text="搜索历史"
+                        android:text="検索歴史"
                         android:textColor="@color/black"
                         android:textSize="@dimen/sp_20"
                         android:textStyle="bold" />

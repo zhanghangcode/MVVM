@@ -5,6 +5,7 @@ import android.text.Html
 import androidx.annotation.RequiresApi
 import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.module.LoadMoreModule
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.mix.mvvm.R
 import com.mix.mvvm.data.bean.Article
@@ -16,7 +17,8 @@ import com.mix.mvvm.data.bean.Article
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-class ArticleAdapter : BaseQuickAdapter<Article.ArticleDetail, BaseViewHolder>(R.layout.item_article) {
+class ArticleAdapter : BaseQuickAdapter<Article.ArticleDetail, BaseViewHolder>(R.layout.item_article),
+    LoadMoreModule {
 
     init {
         addChildClickViewIds(R.id.article_favorite)

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.mix.mvvm.R
+import com.yechaoa.yutilskt.ToastUtil
 
 /**
  * @Date 執筆時間 2022/01/31 11:42
@@ -25,5 +26,6 @@ class TestFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        ToastUtil.show("TestFragment")
     }
 }

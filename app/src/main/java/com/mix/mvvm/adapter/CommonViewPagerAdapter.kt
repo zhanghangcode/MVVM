@@ -24,9 +24,9 @@ class CommonViewPagerAdapter(activity: FragmentActivity)
     }
     override fun getItemCount(): Int = 4
     override fun createFragment(position: Int): Fragment {
-//     return mFragments[position]
+     return mFragments[position]
 
-     return TestFragment()
+//     return TestFragment()
     }
 }
 
