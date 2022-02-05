@@ -54,4 +54,10 @@ abstract class BaseVmActivity<VB : ViewBinding, VM : BaseViewModel>
             }
         })
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mCurrentSize = 0
+        mCurrentPage = 0
+    }
 }

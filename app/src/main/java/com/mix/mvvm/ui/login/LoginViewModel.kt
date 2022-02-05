@@ -20,7 +20,8 @@ class LoginViewModel : BaseViewModel() {
     fun login(username: String?, password: String?) {
         val job = launch(
             block = {
-                _loginState.value = true
+                val loginData = loginRepository.login(username, password)
+                _loginState.value = 0 == loginData.code()
             },
             error = {
                 if (it is NullPointerException) {

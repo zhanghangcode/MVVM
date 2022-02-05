@@ -230,6 +230,7 @@ class SearchActivity : BaseVmActivity<ActivitySearchBinding, SearchViewModel>(Ac
         searchView.apply {
             setIconifiedByDefault(true)
             isSubmitButtonEnabled = true
+
             imeOptions = EditorInfo.IME_ACTION_SEARCH
 
             isIconified = false
@@ -246,14 +247,7 @@ class SearchActivity : BaseVmActivity<ActivitySearchBinding, SearchViewModel>(Ac
         mEditText.setTextColor(ContextCompat.getColor(this, R.color.white30))
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(newText: String): Boolean {
-
-                mBinding.llHotkey.visibility = View.VISIBLE
-                mBinding.recyclerView.visibility = View.GONE
-                return false
-            }
-
-            override fun onQueryTextChange(query: String): Boolean {
+            override fun onQueryTextSubmit(query: String): Boolean {
                 LogUtil.i("aaa", "搜索内容===$query")
                 mKey = query
                 saveSearchHistory(mKey)
@@ -262,6 +256,12 @@ class SearchActivity : BaseVmActivity<ActivitySearchBinding, SearchViewModel>(Ac
                 mViewModel.getArticleList(mCurrentPage, mKey)
                 //清除焦点，收软键盘
                 searchView.clearFocus()
+                return false
+            }
+
+            override fun onQueryTextChange(query: String): Boolean {
+                mBinding.llHotkey.visibility = View.VISIBLE
+                mBinding.recyclerView.visibility = View.GONE
                 return false
             }
 
