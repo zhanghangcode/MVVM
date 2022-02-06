@@ -1,4 +1,4 @@
-package com.mix.mvvm.ui.main.home
+package com.mix.mvvm.demo
 
 import android.os.Bundle
 import android.view.LayoutInflater

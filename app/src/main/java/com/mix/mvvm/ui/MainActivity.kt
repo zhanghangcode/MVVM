@@ -8,19 +8,14 @@ import androidx.fragment.app.Fragment
 
 import com.mix.mvvm.R
 import com.mix.mvvm.adapter.CommonViewPagerAdapter
-import com.mix.mvvm.adapter.setFragmentAdapter
 import com.mix.mvvm.base.BaseActivity
-import com.mix.mvvm.base.BaseVmActivity
 import com.mix.mvvm.common.Config
 import com.mix.mvvm.databinding.ActivityMainBinding
 import com.mix.mvvm.databinding.AppBarMainBinding
 import com.mix.mvvm.databinding.ContentMainBinding
-import com.mix.mvvm.router.ROUTER_PATH_MAIN
 import com.mix.mvvm.ui.login.LoginActivity
 import com.mix.mvvm.ui.main.home.HomeFragment
-import com.mix.mvvm.ui.main.home.TestFragment
-import com.mix.mvvm.ui.main.navi.NaviFragment
-import com.mix.mvvm.ui.main.pro.ProjectFragment
+import com.mix.mvvm.demo.TestFragment
 import com.mix.mvvm.ui.main.tree.TreeFragment
 import com.mix.mvvm.ui.search.SearchActivity
 import com.yechaoa.yutilskt.SpUtil

@@ -46,6 +46,13 @@ interface Api {
     suspend fun getHotkey(): BaseBean<MutableList<Hotkey>>
 
 
+    //-----------------------【 ホーム 】----------------------
+
+    //記事リスト
+    @GET("article/list/{page}/json")
+    suspend fun getArticleList(@Path("page") page: Int): BaseBean<Article>
+
+    //ホームbanner
     @GET("banner/json")
     suspend fun getBanner(): BaseBean<MutableList<Banner>>
 

@@ -2,10 +2,7 @@ package com.mix.mvvm.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.mix.mvvm.ui.main.home.TestFragment
 import java.util.ArrayList
 
 /**

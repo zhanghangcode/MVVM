@@ -12,4 +12,10 @@ import com.mix.mvvm.base.BaseRepository
 class HomeRepository : BaseRepository() {
 
     suspend fun getBanner() = apiService().getBanner().data()
+
+    suspend fun getArticleList(page: Int) = apiService().getArticleList(page).data()
+
+    suspend fun collect(id: Int) = apiService().collect(id)
+
+    suspend fun unCollectByArticle(id: Int) = apiService().unCollectByArticle(id)
 }
