@@ -55,7 +55,7 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(ActivityDetailBinding
             .go(intent.getStringExtra(WEB_URL))
 
         val webView = mAgentWeb.webCreator.webView
-        //获取手势焦点
+        //ジェスチャーフォーカスを取得
         webView.requestFocusFromTouch()
         webView.settings.apply {
             //サポートJS

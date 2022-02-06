@@ -1,10 +1,7 @@
 package com.mix.mvvm.net
 
 import com.mix.mvvm.base.BaseBean
-import com.mix.mvvm.data.bean.Article
-import com.mix.mvvm.data.bean.Collect
-import com.mix.mvvm.data.bean.Hotkey
-import com.mix.mvvm.data.bean.User
+import com.mix.mvvm.data.bean.*
 import retrofit2.http.*
 
 /**
@@ -47,6 +44,10 @@ interface Api {
     //
     @GET("hotkey/json")
     suspend fun getHotkey(): BaseBean<MutableList<Hotkey>>
+
+
+    @GET("banner/json")
+    suspend fun getBanner(): BaseBean<MutableList<Banner>>
 
 
     //-----------------------【 收藏 】----------------------
