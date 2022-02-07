@@ -31,7 +31,7 @@ class HomeFragment : BaseVmFragment<FragmentHomeBinding, HomeViewModel> (Fragmen
 
     override fun initView() {
         initRecyclerView()
-        YUtils.showLoading(activity as Activity, "加载中")
+        YUtils.showLoading(activity as Activity, "読み込む中")
     }
 
     override fun initData() {

@@ -57,6 +57,10 @@ interface Api {
     suspend fun getBanner(): BaseBean<MutableList<Banner>>
 
 
+    @GET("navi/json")
+    suspend fun getNavi(): BaseBean<MutableList<Navi>>
+
+
     //-----------------------【 收藏 】----------------------
 
     //收藏文章列表

@@ -16,6 +16,7 @@ import com.mix.mvvm.databinding.ContentMainBinding
 import com.mix.mvvm.ui.login.LoginActivity
 import com.mix.mvvm.ui.main.home.HomeFragment
 import com.mix.mvvm.demo.TestFragment
+import com.mix.mvvm.ui.main.navi.NaviFragment
 import com.mix.mvvm.ui.main.tree.TreeFragment
 import com.mix.mvvm.ui.search.SearchActivity
 import com.yechaoa.yutilskt.SpUtil
@@ -66,12 +67,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
      * 初期化Fragment
      */
     private fun initFragments() {
-//        val fragmentList: List<Fragment> = listOf(HomeFragment(), TreeFragment(), NaviFragment(), ProjectFragment())
-        val fragmentList: List<Fragment> = listOf(TestFragment(), TestFragment(), TestFragment(), TestFragment())
         val viewPagerAdapter = CommonViewPagerAdapter(this).apply {
             addFragment(HomeFragment())
             addFragment(TreeFragment())
-            addFragment(TestFragment())
+            addFragment(NaviFragment())
             addFragment(TestFragment())
         }
 
@@ -97,8 +96,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             mBinding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
-//        mAppBarMainBinding.contentMain.viewPager
-
 
         mAppBarMainBinding.toolbar.setOnMenuItemClickListener{
             when (it.itemId) {
