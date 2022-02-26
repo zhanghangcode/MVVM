@@ -3,6 +3,9 @@
 
     <string name="author">caden</string>
 
+    <string name="wanandroid">玩安卓</string>
+    <string name="github">https://github.com/zhanghangcode/MVVM</string>
+
     <string name="title_home">ホーム</string>
     <string name="title_tree">体系</string>
     <string name="title_navi">ナビ</string>

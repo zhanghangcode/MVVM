@@ -18,7 +18,7 @@ import java.io.IOException
  * @Email code_legend@163.com
  * @Vesion 1.0
  */
-class AddCookiesInterceptor : Interceptor{
+class AddCookiesInterceptor : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val builder: Request.Builder = chain.request().newBuilder()
