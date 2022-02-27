@@ -72,7 +72,7 @@ class LoginActivity : BaseVmActivity<ActivityLoginBinding, LoginViewModel>(::inf
 
         if (cancel) focusView?.requestFocus()
         else {
-            YUtils.showLoading(this, "加载中")
+            YUtils.showLoading(this, "読み込む中")
             mViewModel.login(username, password)
         }
 

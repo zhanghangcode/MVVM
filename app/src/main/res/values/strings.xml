@@ -6,6 +6,8 @@
     <string name="wanandroid">玩安卓</string>
     <string name="github">https://github.com/zhanghangcode/MVVM</string>
 
+    <string name="qiita">https://qiita.com/legend_zh</string>
+
     <string name="title_home">ホーム</string>
     <string name="title_tree">体系</string>
     <string name="title_navi">ナビ</string>
@@ -23,4 +25,19 @@
     <string name="username">アカウント</string>
     <string name="register">登　録</string>
     <string name="login">ログイン</string>
+
+    <string name="large_text">
+        "ライブラリー：\n\n"
+        "YUtils\n\n"
+        "retrofit\n\n"
+        "rxjava2\n\n"
+        "BRVAH\n\n"
+        "banner\n\n"
+        "glide\n\n"
+        "agentweb\n\n"
+        "VerticalTabLayout\n\n"
+        "flowlayout\n\n"
+        "immersionbar\n\n"
+        "jetpack..\n\n"
+    </string>
 </resources>

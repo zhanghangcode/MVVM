@@ -98,7 +98,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                 R.id.nav_logout -> {
                     AlertDialog.Builder(this).apply {
                         setTitle("提示")
-                        setMessage("ログアウトしますか")
+                        setMessage("ログアウトしますか?")
                         setPositiveButton("確定") {_,_ ->
                             SpUtil.setBoolean(Config.IS_LOGIN, false)
                             SpUtil.removeByKey(Config.COOKIE)
@@ -114,18 +114,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             }
             mBinding.drawerLayout.closeDrawer(GravityCompat.START)
 
-            true
-        }
-
-        mBinding.navView.setNavigationItemSelectedListener {
-            when(it.itemId) {
-                R.id.nav_collect -> startActivity(Intent(this, LoginActivity::class.java))
-                R.id.nav_share -> startActivity(Intent(this, LoginActivity::class.java))
-                R.id.nav_about -> startActivity(Intent(this, LoginActivity::class.java))
-                R.id.nav_logout -> startActivity(Intent(this, LoginActivity::class.java))
-            }
-            //閉じる
-            mBinding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
 
