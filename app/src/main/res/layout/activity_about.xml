@@ -34,11 +34,11 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        <include
-            android:id="@+id/content_about"
-            layout="@layout/content_about" />
-
 </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/content_about"
+        layout="@layout/content_about" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

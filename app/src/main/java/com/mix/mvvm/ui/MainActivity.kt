@@ -17,6 +17,7 @@ import com.mix.mvvm.databinding.ContentMainBinding
 import com.mix.mvvm.ui.login.LoginActivity
 import com.mix.mvvm.ui.main.home.HomeFragment
 import com.mix.mvvm.demo.TestFragment
+import com.mix.mvvm.ui.about.AboutActivity
 import com.mix.mvvm.ui.main.navi.NaviFragment
 import com.mix.mvvm.ui.main.tree.TreeFragment
 import com.mix.mvvm.ui.search.SearchActivity
@@ -94,7 +95,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             when (it.itemId) {
                 R.id.nav_collect -> startActivity(Intent(this, SearchActivity::class.java))
                 R.id.nav_share -> ShareUtil.shareText(getString(R.string.wanandroid), getString(R.string.github))
-                R.id.nav_about -> startActivity(Intent(this, SearchActivity::class.java))
+                R.id.nav_about -> startActivity(Intent(this, AboutActivity::class.java))
                 R.id.nav_logout -> {
                     AlertDialog.Builder(this).apply {
                         setTitle("提示")
